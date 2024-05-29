@@ -11,28 +11,37 @@ class UI(QMainWindow):
  
         # find the widgets in the xml file
         
-        lista=[
-                {"nome":"Andrea","professore":"Marco","ore":"24"},
-                {"nome":"Marco","professore":"Andreoli","ore":"24"},
-                {"nome":"Ruspi","professore":"Luca","ore":"24"}
+        self.lista=[
+                {"studente":"Andrea","professore":"Marco","ore":"24"},
+                {"studente":"Marco","professore":"Andreoli","ore":"24"},
+                {"studente":"Ruspi","professore":"Luca","ore":"24"}
             ]
         
         self.buttonRimuovi = self.findChild(QPushButton, "bRimuovi")
-        self.buttonRimuovi.clicked.connect(self.clickedBtn)
+        self.buttonRimuovi.clicked.connect(self.clickedRimuovi)
         
         self.tabella = self.findChild(QTableWidget, "tabellaAssociazione")
         self.tabella.setColumnCount(3)
-        self.tabella.setRowCount(4)
+        self.tabella.setRowCount(3)
         self.tabella.setHorizontalHeaderLabels(["nome","cognome","ore"])
         
-        self.tabella.setItem(0,0,QTableWidgetItem(lista[0]["nome"]))  
+        cont=0
+        for i in self.lista:
+            self.tabella.setItem(cont,0,QTableWidgetItem(i["studente"]))
+            self.tabella.setItem(cont,1,QTableWidgetItem(i["professore"]))
+            self.tabella.setItem(cont,2,QTableWidgetItem(i["ore"])) 
+            cont+=1
         
         self.show()
         
-    def clickedBtn(self):
+    def clickedRimuovi(self):
+        #rimuovere la riga delle informazioni dalla tabella e dal dizionario
+        indice = self.tabella.currentRow()
+        print(indice)
+        self.lista.remove(self.lista[indice])
+        self.tabella.removeRow(indice);
+        print(self.lista)
         
-        atext = self.textedit.text()
-        print(atext)
 
 app = QApplication(sys.argv)
 window = UI()
