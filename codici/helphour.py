@@ -7,7 +7,7 @@ import sys
 class UI(QMainWindow):
     def __init__(self):
         super(UI, self).__init__()
-        uic.loadUi(r"mainwindow.ui", self)
+        uic.loadUi(r"P:\Iterface\IterfaceLab\interfacciaGrafica\mainwindow.ui", self)
  
         # find the widgets in the xml file
         
