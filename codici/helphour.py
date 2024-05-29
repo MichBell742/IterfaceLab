@@ -20,6 +20,9 @@ class UI(QMainWindow):
         self.buttonRimuovi = self.findChild(QPushButton, "bRimuovi")
         self.buttonRimuovi.clicked.connect(self.clickedRimuovi)
         
+        self.buttonInterfaccia1 = self.findChild(QPushButton, "cambiaInterfaccia")
+        self.buttonInterfaccia1.clicked.connect(self.changeInterface)
+        
         self.tabella = self.findChild(QTableWidget, "tabellaAssociazione")
         self.tabella.setColumnCount(3)
         self.tabella.setRowCount(3)
@@ -42,7 +45,12 @@ class UI(QMainWindow):
         self.tabella.removeRow(indice);
         print(self.lista)
         
+    def changeInterface(self):
+        execfile(r"secondaryCode.py")
 
+
+        
+        
 app = QApplication(sys.argv)
 window = UI()
 app.exec_()

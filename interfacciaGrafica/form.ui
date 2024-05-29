@@ -13,11 +13,11 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="cambiaInterfaccia">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>220</y>
+     <x>210</x>
+     <y>200</y>
      <width>131</width>
      <height>51</height>
     </rect>
