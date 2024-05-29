@@ -4,7 +4,7 @@ Repository con i file di python riguardanti il progetto extrascolastico Iterface
 ## Gruppo di lavoro
 il gruppo è costituito da:
 
-Michele, Anouar, Giacomo
+Michele, Anwar, Giacomo
 
 ## Ruolo
 abbiamo il compito di progettare un programma in python che avendo degli elementi all'interno della tabella, cliccandoci sopra due volte, rimuova sia quelli visibili che quelli nel dizionario.
