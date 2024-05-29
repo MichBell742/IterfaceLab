@@ -46,6 +46,7 @@ class UI(QMainWindow):
         print(self.lista)
         
     def changeInterface(self):
+        #C'è un problema con execfile(), se si utilizza questo comando il file si chiudera resettando i precedenti dati
         execfile(r"secondaryCode.py")
 
 
