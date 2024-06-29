@@ -1,4 +1,4 @@
-# IterfaceLab
+# InterfaceLab
 Repository con i file di python riguardanti il progetto extrascolastico IterfaceLab
 
 ## Gruppo di lavoro
